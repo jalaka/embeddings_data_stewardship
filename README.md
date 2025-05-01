@@ -87,4 +87,4 @@ The results indicate that the base `BAAI/bge-large-en-v1.5` model generally perf
 ## Used datasources
 
 [![DOI](https://test.researchdata.tuwien.ac.at/badge/DOI/10.82556/x0q6-dm10.svg)](https://handle.stage.datacite.org/10.82556/x0q6-dm10)
-[![DOI](https://test.dbrepo.tuwien.ac.at/database/e31b2788-e1da-4a4a-9892-d2b5a1216df6/info)](https://doi.org/10.82556/hyyh-jr24)
+[Training Data](https://test.dbrepo.tuwien.ac.at/database/e31b2788-e1da-4a4a-9892-d2b5a1216df6/info)
