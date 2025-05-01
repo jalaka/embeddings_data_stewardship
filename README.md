@@ -64,9 +64,9 @@ The notebooks should be executed in the following order:
 The `DATA_aquisition_preprocessing/` folder contains notebooks used for fetching and preprocessing data directly from the Common Crawl dataset. This is **not required** if you use the `dbrepo` client in notebooks `01` and `02` to fetch the pre-processed data. However, if you wish to understand or replicate the data acquisition process from scratch, you can explore these notebooks:
 
 1.  **`DATA_aquisition_preprocessing/1_download_url_index.ipynb`**: Downloads the Common Crawl index files relevant to specific domains (e.g., `.at`). Requires Spark.
-2.  **`DATA_aquisition_preprocessing/2_filter_index.ipynb`**: (Notebook seems missing from the prompt, but logically follows) Filters the downloaded index files based on specific criteria or URLs. Requires Spark.
-3.  **`DATA_aquisition_preprocessing/3_get_metadata.ipynb`**: (Notebook seems missing from the prompt, but logically follows) Fetches metadata associated with the filtered URLs. Requires Spark.
-4.  **`DATA_aquisition_preprocessing/4_filter_metadata.ipynb`**: (Notebook seems missing from the prompt, but logically follows) Filters the metadata based on specific criteria (e.g., language, keywords). Requires Spark.
+2.  **`DATA_aquisition_preprocessing/2_filter_index.ipynb`**: Filters the downloaded index files based on specific criteria or URLs. Requires Spark.
+3.  **`DATA_aquisition_preprocessing/3_get_metadata.ipynb`**: Fetches metadata associated with the filtered URLs. Requires Spark.
+4.  **`DATA_aquisition_preprocessing/4_filter_metadata.ipynb`**: Filters the metadata based on specific criteria (e.g., language, keywords). Requires Spark.
 5.  **`DATA_aquisition_preprocessing/5_download_wat_wet.ipynb`**: Downloads the actual web content (WET) and metadata/link information (WAT) files from Common Crawl for the final set of URLs and extracts the relevant records. Requires Spark and `warcio`. Saves the final data to `savedata.json`.
 
 **Note:** Running the data acquisition notebooks requires significant disk space, bandwidth, and processing time. They rely on Apache Spark for distributed processing.
@@ -83,3 +83,8 @@ The comparison between the custom fine-tuned model and the base BAAI/bge-large-e
 ![AUC-ROC Scores](https://github.com/user-attachments/assets/5336027c-69b9-44a6-8ad9-51e4fcffecca)
 
 The results indicate that the base `BAAI/bge-large-en-v1.5` model generally performs better on this specific relevance classification task according to the AUC-ROC score, although the custom model shows slightly different characteristics in terms of precision/recall trade-offs based on the chosen thresholds. This is probably the case as the resulting model wasn't finteuned very much, because of contrained GPU resources (Google Colab).
+
+## Used datasources
+
+[![DOI](https://test.researchdata.tuwien.ac.at/badge/DOI/10.82556/x0q6-dm10.svg)](https://handle.stage.datacite.org/10.82556/x0q6-dm10)
+[![DOI](https://test.dbrepo.tuwien.ac.at/database/e31b2788-e1da-4a4a-9892-d2b5a1216df6/info)](https://doi.org/10.82556/hyyh-jr24)
